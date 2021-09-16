@@ -26,9 +26,9 @@ class Calc {
 
     int romeToArab (String RomeNumb) {              //говно код, но время жмёт (((
 
-        if (RomeNumb.equals("I")) {
-            Rome rome = Rome.I;
-            return rome.getToArab();
+        if (RomeNumb.equals("I")) {                 // создал такой метод изначально для поиска римских цифр, но потом впихнул и арабские
+            Rome rome = Rome.I;                     // римские достаем из енама
+            return rome.getToArab();                // арабские просто ретёрном конкретного числа
         }
         else if (RomeNumb.equals("II")) {
             Rome rome = Rome.II;
@@ -129,13 +129,14 @@ public class Calculator {
             }
         }
 
-        String numBack = String.valueOf(allChar);
-        String[] splitNum = numBack.split("[+-/*]");
-        String firstN = splitNum[0];
-        String secondN = splitNum[1];
+        String numBack = String.valueOf(allChar);                   // Возвращаем
+        String[] splitNum = numBack.split("[-+/*]");          // Создаем массив с разделением операторами
+        String firstN = splitNum[0];                                // Создаем строку из первого чара
+        String secondN = splitNum[1];                               // Создаем строку из второго чара
+        String thirdN = secondN.trim();                             // Удаляем пробелы
         Calc calc = new Calc();
-        num1 = calc.romeToArab(firstN);
-        num2 = calc.romeToArab(secondN);
+        num1 = calc.romeToArab(firstN);                             // присваиваем значение переменным через метод
+        num2 = calc.romeToArab(thirdN);
         if (num1 < 0 && num2 < 0) {
             result = 0;
         } else {

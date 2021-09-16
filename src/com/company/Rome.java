@@ -6,10 +6,12 @@ public enum Rome {
     private int toArab;
 
     Rome(int toArab) {
+
         this.toArab = toArab;
     }
 
     public int getToArab() {
+
         return toArab;
     }
 }
