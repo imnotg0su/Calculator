@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 class Calc {
-    int calculated(int number1, int number2, char oper) {
+    int calculated(int number1, int number2, char oper) {           //метод - какую операцию при каком операторе
         int result = 0;
         switch (oper) {
             case '+':
@@ -26,7 +26,7 @@ class Calc {
 
     int romeToArab (String RomeNumb) {              //говно код, но время жмёт (((
 
-        if (RomeNumb.equals("I")) {                 // создал такой метод изначально для поиска римских цифр, но потом впихнул и арабские
+        if (RomeNumb.equals("I")) {
             Rome rome = Rome.I;                     // римские достаем из енама
             return rome.getToArab();                // арабские просто ретёрном конкретного числа
         }
