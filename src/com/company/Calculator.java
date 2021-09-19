@@ -115,9 +115,13 @@ public class Calculator {
             result = 0;
         } else {
             result = calc.calculated(num1, num2, oper);
-            String Rresult = Integer.toString(result);
-            System.out.println(Rome.valueOf()[Rresult]);
+            Rome Rresult = Rome.getById(result);
+            System.out.println(Rresult);
         }
+        num1 = Integer.parseInt(firstN);
+        num2 = Integer.parseInt(thirdN);
+        result = calc.calculated(num1, num2, oper);
+        System.out.print(result);
 
 
     }

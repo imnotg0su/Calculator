@@ -25,6 +25,11 @@ public enum Rome {
 
         return toArab;
     }
-
+    public static Rome getById(int toArab) {                // конструктор для поискак и перевода в римский ответ
+        for(Rome a : values()) {
+            if(a.toArab ==(toArab)) return a;
+        }
+        return null;
+    }
 
 }
