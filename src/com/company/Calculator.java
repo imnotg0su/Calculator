@@ -1,5 +1,6 @@
 package com.company;
 
+import javax.xml.namespace.QName;
 import java.util.Scanner;
 
 class Calc {
@@ -66,38 +67,11 @@ class Calc {
             Rome rome = Rome.X;
             return rome.getToArab();
         }
-        else if (RomeNumb.equals("1")) {
-            return 1;
-        }
-        else if (RomeNumb.equals("2")) {
-            return 2;
-        }
-        else if (RomeNumb.equals("3")) {
-            return 3;
-        }
-        else if (RomeNumb.equals("4")) {
-            return 4;
-        }
-        else if (RomeNumb.equals("5")) {
-            return 5;
-        }
-        else if (RomeNumb.equals("6")) {
-            return 6;
-        }
-        else if (RomeNumb.equals("7")) {
-            return 7;
-        }
-        else if (RomeNumb.equals("8")) {
-            return 8;
-        }
-        else if (RomeNumb.equals("9")) {
-            return 9;
-        }
-        else if (RomeNumb.equals("10")) {
-            return 10;
-        }
+
         return -1;
     }
+
+
 }
 
 public class Calculator {
@@ -141,7 +115,8 @@ public class Calculator {
             result = 0;
         } else {
             result = calc.calculated(num1, num2, oper);
-            System.out.println(result);
+            String Rresult = Integer.toString(result);
+            System.out.println(Rome.valueOf()[Rresult]);
         }
 
 

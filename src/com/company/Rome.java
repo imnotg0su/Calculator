@@ -26,7 +26,5 @@ public enum Rome {
         return toArab;
     }
 
-    public Rome backRome(int toArab) {                  // создаем метод для возвращения результата римскими
-        return Rome.values()[toArab-1];                 // рано отправил .... ничего не успеваю ((
-    }
+
 }
