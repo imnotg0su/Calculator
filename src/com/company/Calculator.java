@@ -113,13 +113,13 @@ public class Calculator {
         if (num1 < 0 || num2 < 0) {
             result = 0;
         } else if (num1>0 && num1<=10 && num2>0 && num2<=10 ){
-            result = calc.calculated(num1, num2, oper);
-            Rome Rresult = Rome.getById(result);
+            result = calc.calculated(num1, num2, oper);             // вычисляем значение
+            Rome Rresult = Rome.getById(result);                    // ищем имя в енаме(значение римским числом)
             System.out.println(Rresult);
         }
-        num1 = Integer.parseInt(firstN);
+        num1 = Integer.parseInt(firstN);                            //парсим наши знаки в числа
         num2 = Integer.parseInt(thirdN);
-        result = calc.calculated(num1, num2, oper);
+        result = calc.calculated(num1, num2, oper);                 //вычисляем результат
         System.out.print(result);
 
 
