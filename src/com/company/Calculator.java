@@ -116,12 +116,14 @@ public class Calculator {
             result = calc.calculated(num1, num2, oper);             // вычисляем значение
             Rome Rresult = Rome.getById(result);                    // ищем имя в енаме(значение римским числом)
             System.out.println(Rresult);
+            System.exit(0);
         }
-        num1 = Integer.parseInt(firstN);                            //парсим наши знаки в числа
-        num2 = Integer.parseInt(thirdN);
-        result = calc.calculated(num1, num2, oper);                 //вычисляем результат
-        System.out.print(result);
-
+            num1 = Integer.parseInt(firstN);
+            num2 = Integer.parseInt(thirdN);
+            if (num1>0 && num1<=10 && num2>0 && num2<=10 ) {
+                result = calc.calculated(num1, num2, oper);
+                System.out.println(result);
+            }
 
     }
 
