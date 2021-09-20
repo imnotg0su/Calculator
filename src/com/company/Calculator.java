@@ -111,9 +111,9 @@ public class Calculator {
         Calc calc = new Calc();
         num1 = calc.romeToArab(firstN);                             // присваиваем значение переменным через метод
         num2 = calc.romeToArab(thirdN);
-        if (num1 < 0 && num2 < 0) {
+        if (num1 < 0 || num2 < 0) {
             result = 0;
-        } else {
+        } else if (num1>0 && num1<=10 && num2>0 && num2<=10 ){
             result = calc.calculated(num1, num2, oper);
             Rome Rresult = Rome.getById(result);
             System.out.println(Rresult);
